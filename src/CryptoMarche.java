@@ -31,7 +31,7 @@ public class CryptoMarche {
             for(Portefeuille oui: this.portefeuilles)
             {
             	if (oui.estProprietaire(proprietaire))
-                	capital=oui.getMontant() * oui.getMonnaie().getValeurDeJeton();
+                	capital+=oui.getMontant() * oui.getMonnaie().getValeurDeJeton();
             }
             return capital;
         }
@@ -52,7 +52,7 @@ public class CryptoMarche {
             for(Portefeuille oui: this.portefeuilles)
             {
             	if (oui.getMonnaie().getNom()== monnaie.getNom())
-                	capital=oui.getMontant() * oui.getMonnaie().getValeurDeJeton();
+                	capital+=oui.getMontant() * oui.getMonnaie().getValeurDeJeton();
             }
             return capital;
         }
